@@ -10,9 +10,11 @@ app.get('/books', (req, res) => {
     shelf: 'MyShelf',
     books: [
       {
+        id: 1,
         title: 'Dune'
       },
       {
+        id: 2,
         title: 'Beloved'
       }
     ]

@@ -1,0 +1,39 @@
+// Root color variables
+@background-dark: #273423;
+@header-dark: whitesmoke;
+@body-dark: #efefef;
+@book-page: #cec4bc;
+
+// Light mode color variables
+@background-light: whitesmoke;
+@header-light: #273423;
+@body-light: black;
+
+body {
+  background-color: @book-page;
+  color: @body-light;
+  margin: 0;
+  padding: 0;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     background-color: @background-dark;
+//     color: @body-dark;
+
+//     header {
+//       .site-title {
+//         color: @header-dark;
+//       }
+//     }
+//   }
+// }
+
+header {
+  padding: 1rem;
+  
+  .site-title {
+    color: @header-light;
+    margin: 0;
+  }
+}
