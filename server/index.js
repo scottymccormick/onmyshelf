@@ -11,11 +11,23 @@ app.get('/books', (req, res) => {
     books: [
       {
         id: 1,
-        title: 'Dune'
+        title: 'Dune',
+        author: 'Frank Herbert'
       },
       {
         id: 2,
-        title: 'Beloved'
+        title: 'Beloved',
+        author: 'Toni Morrison'
+      },
+      {
+        id: 3,
+        title: 'How to Be an Antiracist',
+        author: 'Ibram X. Kendi'
+      },
+      {
+        id: 4,
+        title: 'Red Storm Rising',
+        author: 'Tom Clancy'
       }
     ]
   };

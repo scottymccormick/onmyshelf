@@ -35,12 +35,19 @@ class App extends Component {
             {name}
           </h1>
         </header>
-        <section>
-          <ul>
+        <section className="shelf-container">
+          <ul className="shelf">
             {
               this.state.books.map(book => {
                 return (
-                  <ul key={book.id}>{book.title}</ul>
+                  <li key={book.id} className="book">
+                    <span className="book-title">
+                      {book.title}
+                    </span>
+                    <span className="book-author">
+                      {`by ${book.author}`}
+                    </span>
+                  </li>
                 )
               })
             }
