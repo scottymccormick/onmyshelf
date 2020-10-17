@@ -1,36 +1,16 @@
 const express = require('express');
+require('dotenv').config();
+
 const app = express();
 const PORT = process.env.PORT || 9001;
 
+const mysqlConnection = require('./connection');
+const testShelf = require('../test/shelf');
 
 app.use(express.static('dist'));
 
 app.get('/books', (req, res) => {
-  const books = {
-    shelf: 'MyShelf',
-    books: [
-      {
-        id: 1,
-        title: 'Dune',
-        author: 'Frank Herbert'
-      },
-      {
-        id: 2,
-        title: 'Beloved',
-        author: 'Toni Morrison'
-      },
-      {
-        id: 3,
-        title: 'How to Be an Antiracist',
-        author: 'Ibram X. Kendi'
-      },
-      {
-        id: 4,
-        title: 'Red Storm Rising',
-        author: 'Tom Clancy'
-      }
-    ]
-  };
+  const books = testShelf;
   res.send(books);
 });
 
