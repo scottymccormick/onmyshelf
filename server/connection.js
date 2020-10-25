@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+import mysql from 'mysql';
 
 const sqlConnection = mysql.createConnection({
   host: 'localhost',
@@ -9,10 +9,10 @@ const sqlConnection = mysql.createConnection({
 
 sqlConnection.connect((err) => {
   if (err) {
-    console.log('error connecting to mysql');
+    console.log('error connecting to mysql', err);
     return;
   }
   console.log('successful connection to mysql');
 });
 
-module.exports = sqlConnection;
+export default sqlConnection;

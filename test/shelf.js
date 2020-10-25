@@ -1,4 +1,4 @@
-module.exports = {
+const testShelf = {
   shelf: 'MyShelf',
   books: [
     {
@@ -23,3 +23,5 @@ module.exports = {
     }
   ]
 };
+
+export default testShelf;

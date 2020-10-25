@@ -23,7 +23,7 @@ class App extends Component {
       (error) => {
         console.log('there was an error from the /books call');
         console.log(error);
-      })
+      });
   }
 
   render() {
